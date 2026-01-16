@@ -34,7 +34,7 @@ Important: If you have a disease grouping variable for Model E, map disease_stat
 
 
 
-4. Run the analysis by runing these two commands in your console:
+4. Run the analysis by running these two commands in your console:
 
        source("Analysis_template.R")
 
