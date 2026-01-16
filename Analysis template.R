@@ -30,35 +30,35 @@ options(dplyr.summarise.inform = FALSE)
 # -----------------------------------------------------------------------------
 
 # --- Input paths
-metadata_path  <- "/Users/maxullrich/Documents/GitHub/FiberTypeR-applied/data/lit_review/Metadata/metadata_PMID40683252.csv"
-fibertype_path <- "/Users/maxullrich/Documents/GitHub/FiberTypeR-applied/data/lit_review/FibeRtypeR_results/fibeRtypeR_result_GSE282733.csv"
+metadata_path  <- "add path to your metadata here"
+fibertype_path <- "add path to FibeRtypeR results here"
 
 # --- Study identifier (used in file names). If NULL, derived from metadata filename.
-study_id <- "PMID40683252"
+study_id <- "PMID.....add study PMID here......"
 
 # --- Outcome to model (choose 1 present in data): "HOMA_IR", "M_value", or "Matsuda_index"
 # If you have multiple outcomes, run the script separately for each.
 outcome_var <- "HOMA_IR"
 
 # --- Optional: filter to baseline/Pre values (set both to NULL to skip)
-baseline_filter_col <- "Condition"
-baseline_filter_val <- "Pre"
+baseline_filter_col <- "Condition"      # column name that selects timepoint
+baseline_filter_val <- "Pre"            # variable that equalts Pre or baseline timepoint
 
 # --- Output root (folders created if missing)
-output_dir <- paste0(study_id, "_outputs_4")  # creates {figures, results, logs}
+output_dir <- paste0(study_id, "_outputs")  # creates {figures, results, logs}
 
 # --- Column mapping: collaborator's original names -> standardized names below
 # Fill only what exists; leave others NULL (handled gracefully).
 column_map <- list(
-        RNAseq_ID       = "GSE",                 # REQUIRED: must match fibertype table IDs
-        BMI             = "d14.bmi",
-        HOMA_IR         = "homair",
-        M_value         = "m",
+        RNAseq_ID       = "fill in your RNAseq_ID column here",                 # REQUIRED: must match fibertype table IDs
+        BMI             = "fill in your BMI column here",
+        HOMA_IR         = "fill in your HOMA-IR column here",
+        M_value         = "fill in your M-value column here",
         Matsuda_index   = NULL,
-        age             = "age",
-        sex             = NULL,
-        waist_hip_ratio = "d14.waist.hip",
-        fat_percentage  = "total.whole.body.fat.1",
+        age             = "fill in your age column here",
+        sex             = "fill in your sex column here",
+        waist_hip_ratio = "fill in your waist_hip_ratio column here",
+        fat_percentage  = "fill in your fat % column here",
         # Manual mapping required for disease models (E):
         disease_state   = NULL                   # e.g., "group", "status", "disease"
 )
