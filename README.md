@@ -51,5 +51,4 @@ Important: If you have a disease grouping variable for Model E, map disease_stat
 
 
 
-5. Return only the results
-Send back the full "outputs" folder
+5. Please send the full "outputs" folder to "jeppefoged.vighlarsen@ugent.be"
