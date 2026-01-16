@@ -35,18 +35,18 @@ Important: If you have a disease grouping variable for Model E, map disease_stat
 
 4. Run the analysis by runing these two commands in your console:
 
-   source("Analysis_template.R")
+       source("Analysis_template.R")
 
-   run_all()
+       run_all()
 
 
   The script will:
 
-    - Restore packages from renv.lock (first run may take a few minutes)
-    - Run eligible models
-    - Save outputs in ./<study_id>_outputs/
+  - Restore packages from renv.lock (first run may take a few minutes)
+  - Run eligible models
+  - Save outputs in ./<study_id>_outputs/
 
 
 
-Return only the results
-Send back the CSV results (and optionally the QC PDF) from the outputs directory. Do not send raw data.
+5. Return only the results
+Send back the full "outputs" folder
